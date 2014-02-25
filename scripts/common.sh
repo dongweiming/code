@@ -46,7 +46,9 @@ install_code() {
     . venv/bin/activate
     pip install cython  # should install first
     pip install -U setuptools  # python-libmemcached require updated setuptools
-    pip install "distribute==0.6.29" # Fixed install MySQL-python  for #14
+    if [ -f /etc/arch-release ] ; then
+        pip install "distribute==0.6.29" # Fixed install MySQL-python on archlinux  for #14
+    fi
     pip install -r requirements.txt
 }
 
