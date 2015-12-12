@@ -60,7 +60,7 @@ class TestTeam(TestCase):
                                                    project_id=project_id)
         ok_(relationship is None)
 
-    def ttest_at_team(self):  # FIXME
+    def test_at_team(self):
         mention = "test_team"
         team_name = "测试team"
         description = "测试"

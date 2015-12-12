@@ -33,7 +33,7 @@ class TestUser(TestCase):
         assert u.username == 'testu'
         assert u.url == '/people/testu/'
 
-    def ttest_get_current_user(self):  # noqa
+    def test_get_current_user(self):
         assert not User.get_current_user()
 
     def test_user_equal(self):
